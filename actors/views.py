@@ -6,15 +6,12 @@ from actors.serializers import ActorSerializer
 
 
 class ActorCreateListView(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticated, GlobalDefaultPermissions,) # para uso da api, deve estar autenticado com jason web token
+    permission_classes = (IsAuthenticated, GlobalDefaultPermissions,)  # para uso da api, deve estar autenticado com jason web token
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
-
 
 
 class ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthenticated, GlobalDefaultPermissions,) # para uso da api, deve estar autenticado com jason web token
+    permission_classes = (IsAuthenticated, GlobalDefaultPermissions,)  # para uso da api, deve estar autenticado com jason web token
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
-    
-    

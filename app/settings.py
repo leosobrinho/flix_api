@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', 
+    'rest_framework',
     'rest_framework_simplejwt',
 
     'authentication',
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'actors',
     'movies',
     'reviews',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -144,4 +144,3 @@ SIMPLE_JWT = {
     "ACESS_TOKEN_LIFETIME": timedelta(days=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
 }
-
