@@ -8,9 +8,6 @@ class GlobalDefaultPermissions(permissions.BasePermission):
             method=request.method,
             view=view,
         )
-        print("MODEL PERMISSION:", model_permission_codename)
-        print("USER", request.user)
-        print("IS SUPERUSER:", request.user.is_superuser)
 
         if not model_permission_codename:
             return request.user.is_superuser
